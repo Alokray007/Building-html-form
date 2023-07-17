@@ -3,52 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Survey Form</title>
 </head>
 <body>
-    <form action="" method="post">
+    <form action="/handle-form" method="post">
         <fieldset>
-            <legend></legend>
+            <legend>Add User</legend>
             <div>
                 <label for="fname">First Name: </label>
-                <input type="text" name="fname" id="fname">
+                <input type="text" name="fname" id="fname" placeholder="Enter your First Name">
             </div>
             <div>
-                <label for="lname">Last Name: </label>
-                <input type="text" name="lname" id="lname">
+                <label for="lname">Last Name:  </label>
+                <input type="text" name="lname" id="lname" placeholder="Enter your last Name">
             </div>
             <div>
                 <label for="email">Email: </label>
-                <input type="email" name="email_address" id="email">
+                <input type="email" name="email_address" id="email" placeholder="Enter your Email">
             </div>
             <div>
-                <label for="status">Status</label>
+                <label for="status">Status: </label>
                 <select name="role" id="status">
                     <option value="student">Student</option>
                     <option value="teacher">Teacher</option>
                     <option value="guest">Guest</option>
                 </select>
             </div>
+            <hr>
             <div>
                 <p>Choose your favorite programming language: </p>
-                <label for="html">HTML</label>
-                <input type="radio" name="html" id="html">
-                <label for="css">CSS</label>
-                <input type="radio" name="css" id="css">
+
+                <!-- Providing same name to differnt radio button helps in selecting 1 buttoon at a time -->
+
+                <input type="radio" name="hcj" id="html">
+                <label for="html">HTML</label><br>
+                <input type="radio" name="hcj" id="css">
+                <label for="css">CSS</label><br>
+                <input type="radio" name="hcj" id="javascript">
                 <label for="javascript">javascript</label>
-                <input type="radio" name="javascript" id="javascript">
             </div>
+            <hr>
             <div>
                 <label for="comments">Comments: </label>
-                <input type="text" name="comments" id="comments">
+                <textarea name="" id="comments">Comment here</textarea><br>
                 <label for="date">Current date: </label>
                 <input type="date" name="current_date" id="date">
             </div>
+            <hr>
             <div>
                 <input type="checkbox" name="newsletter" id="newsletter">
-                <label for="newsletter">Sign up for newsletter</label>
+                <label for="newsletter">Sign up for newsletter</label><br>
                 <input type="checkbox" name="t&c" id="terms">
-                <label for="terms">Agree to terms and conditions</label>
+                <label for="terms">Agree to terms and conditions</label><br>
                 <input type="submit" value="Submit">
             </div>
         </fieldset>
